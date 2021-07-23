@@ -5,8 +5,8 @@ const DigimonSchema=new Schema ({
     name:{
         type:String,
     unique:true,
-  lowercase:true,
-  trim:true
+//   lowercase:true,
+//   trim:true
 },
 
     img:{

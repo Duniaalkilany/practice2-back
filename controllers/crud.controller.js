@@ -2,9 +2,6 @@
 //here i will use the model cause i need it in crud functions
 const DigimonModel=require('../models/mongoose.model')
 
-
-
-
 //create fav post 
 const createFav =(req,res)=>{
     const{name,img,level}=req.body
@@ -47,7 +44,7 @@ const getFav=(req,res)=>{
 
 const deleteFav=(req,res)=>{
 const name=req.params.name
-DigimonModel.deleteOne({name:name},(erroe,data)=>{
+DigimonModel.deleteOne({name:name},(error,data)=>{
     if(error){
         res.send(error.message)
     }else{
@@ -72,14 +69,6 @@ const updateFav=(req,res)=>{
         }
     } )
 }
-
-
-
-
-
-
-
-
 
 
 
