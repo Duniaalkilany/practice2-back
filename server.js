@@ -8,12 +8,8 @@ app.use(express.json());
 require('dotenv').config();
 const PORT=process.env.PORT
 //connect mongoose 
-mongoose.connect('mongodb://localhost:27017/Digimon', {useNewUrlParser:true,useUnifiedTopology:true});
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function () {
-  console.log('mongodb is connected!');
-});
+mongoose.connect(`mongodb://duniaabd:1234@cluster0-shard-00-00.ozfv0.mongodb.net:27017,cluster0-shard-00-01.ozfv0.mongodb.net:27017,cluster0-shard-00-02.ozfv0.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-10hzt2-shard-0&authSource=admin&retryWrites=true&w=majority`, {useNewUrlParser:true,useUnifiedTopology:true});
+
 
 
 
